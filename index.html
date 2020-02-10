@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Howie's website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"
+    />
+    <style>
+      @import url("./css/all.css");
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ====== Header ====== -->
+      <div class="header">
+        <div class="menu">
+          <a href="#" id="menu">
+            <i class="fas fa-chevron-down" id="menuShow"></i>
+            <i class="fas fa-chevron-up" id="menuHidden"></i>
+          </a>
+        </div>
+        <!-- --- Logo --- -->
+        <div class="logo">
+          <a href="#home" id="logo">Howie</a>
+        </div>
+        <!-- --- 導覽列 --- -->
+        <nav class="nav" id="nav">
+          <a href="#experience">Experience</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#works">Works</a>
+        </nav>
+      </div>
+      <!-- ====== 首頁 ====== -->
+      <div class="home" id="home">
+        <div class="mask">
+          <h1>Hello I'm Howie</h1>
+          <h2>
+            <p>Welcome to my website</p>
+            <p>Here are all about me</p>
+          </h2>
+          <a href="#" class="slideBtn" id="slideBtn">
+            <i class="fas fa-long-arrow-alt-down"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ====== 學經歷 ====== -->
+      <div class="experience" id="experience">
+        <div class="mask">
+          <h1 id="test">Experience</h1>
+          <div class="section">
+          <div class="item">
+            <h2>雲林科技大學</h2>
+            <h3>電子工程學系<span class="time">2010/9 ~ 2014/6</span></h3>
+          </div>
+          <div class="item">
+            <h2>微星科技</h2>
+            <h3>主機板維修班<span class="time">2015/9 ~ 2015/10</span></h3>
+            <ul class="detail">
+              <li>烙鐵銲接操作</li>
+              <li>熱風槍操作</li>
+              <li>電路分析</li>
+            </ul>  
+          </div>
+          <div class="item">
+            <h2>微星科技</h2>
+            <h3>驗證工程師<span class="time">2015/10 ~ 2016/4</span></h3>
+            <ul class="detail">
+              <li>測試BIOS是否存在Issue</li>
+              <li>撰寫英文Report</li>
+            </ul>  
+          </div>
+          <div class="item">
+            <h2>微星科技</h2>
+            <h3>產品工程師<span class="time">2016/5 ~ 2019/10</span></h3>
+            <ul class="detail">
+              <li>技轉新產品測試</li>
+              <li>改善量產測試效率</li>
+              <li>不良品分析維修</li>
+            </ul> 
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- ====== 關於我 ====== -->
+      <div class="about" id="about">
+        <h1>ABOUT</h1>
+        <div class="section">
+          <!-- --- 左側 --- -->
+          <div class="pic">
+            <img src="./image/me.jpg" alt="myPhoto" class="me">
+            <div class="icon">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="email">
+              <i class="far fa-envelope"></i>howie12207@gmail.com  
+            </p>
+          </div>
+          <!-- --- 右側 --- -->
+          <div class="txt">
+            <p>在2014年畢業於<strong>雲林科技大學電子工程系</strong>，求學期間修過<strong>8051</strong>與<strong>C++</strong>，畢業後服完一年兵役，隨即看到市政府職訓局與微星科技有合作開課—<strong>主機板維修</strong>，抱著學習一技之長的想法參加了兩個月的訓練，結束後進入微星科技的<strong>BIOS驗證部門。</strong><//strong></p>
+            <p>第一份正式工作—<strong>驗證工程師</strong>，主要內容為測試新設計的BIOS，是否會與系統衝突及是否存在其他issue，並以英文寫成report反饋，這段期間也學會自行組裝電腦及及安裝相應軟件，後來因應部門縮編轉調到產線工廠端。</p>
+            <p>第二份工作–<strong>產品工程師</strong>，主要內容為新產品導入測試、改善量產測試效率及不良品分析，產品種類有筆電、桌機、AIO、主機板、顯示卡……等，期間學會使用<strong>Dos</strong>語法撰寫<strong>batch批次檔</strong>、及<strong>Linux Shell</strong>，藉以測試產品。</p>
+            <p>接觸了軟硬體後，漸漸發現自己對code撰寫與邏輯推理有興趣，開始規劃朝著純軟體走向，後來發現網頁算是一個易入門的軟體業，打上code即可在網頁上看到結果，不必透過打包封裝等複雜程序才能看出效果，於是利用空檔之餘摸索了一陣子，從<strong>HTML</strong>、<strong>CSS</strong>到<strong>Javascript</strong>，發現東西實在太多了，時間根本不夠用，於是下定決心向主管提出辭職，結束了四年微星之旅。</p>
+            <p>接著開始專注學習網頁開發，從切版、動畫、互動效果，做出了<strong>todolist</strong>，為求能更快上手，選擇了一套易上手的框架–<strong>Vue</strong>，利用<strong>SCSS</strong>使CSS變得更加簡潔與擁有重複性。接著遇到誤刪程式碼無法復原的狀況，了解到<strong>Git</strong>控管的重要性，為了讓其他人能看到我的成品，也學到使用<strong>GitHub Page</strong>呈現網頁其他人查看，最後透過<strong>Vue</strong>做出一個電商網站。我知道自己還很菜，希望能透過實際工作，累積經驗、與他人合作開發，增進彼此能力，前端的技術更新的很快，持續精進才能走得更長久。</p>
+          </div>
+        </div>
+      </div>
+      <!-- ====== 技能樹 ====== -->
+      <div class="skills" id="skills">
+        <div class="mask">
+          <h1>SKILLS</h1>
+          <div class="section">
+            <div class="item">
+              <div class="pic">
+                <img src="./image/html5.png" alt="html5">
+              </div>
+              <div class="txt">
+                <h2>HTML / CSS</h2>
+                <ul>
+                  <li>熟悉Html元素及CSS切版</li>
+                  <li>RWD響應式設計</li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic">
+                <img src="./image/js.png" alt="js">
+              </div>
+              <div class="txt">
+                <h2>JAVASCRIPT</h2>
+                <ul>
+                  <li>使用ES6語法優化code</li>
+                  <li>使用ESLint規則程式碼撰寫</li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic">
+                <img src="./image/vue.png" alt="vue">
+              </div>
+              <div class="txt">
+                <h2>VUE</h2>
+                <ul>
+                  <li>使用Vue CLI3 開發專案</li>
+                  <li>使用Vuex管理資料流</li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic">
+                <img src="./image/scss.png" alt="scss">
+              </div>
+              <div class="txt">
+                <h2>SCSS</h2>
+                <ul>
+                  <li>使用變數提高可維護性</li>
+                  <li>使用巢狀使code簡潔</li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic">
+                <img src="./image/git.png" alt="git">
+              </div>
+              <div class="txt">
+                <h2>GIT</h2>
+                <ul>
+                  <li>使用Git控管程式碼</li>
+                  <li>使用GitHub Page建立網頁</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ====== 作品集 ====== -->
+      <div class="works" id="works">
+        <div class="mask">
+          <h1>WORKS</h1>
+          <div class="section">
+            <div class="item">
+              <div class="pic">
+                <div class="mask">
+                  <a href="https://github.com/howie12207/calendar" target="_blank" class="btn">Code</a>
+                  <a href="https://howie12207.github.io/calendar/index.html" target="_blank" class="btn">Demo</a>
+                </div>
+                <img src="./image/calendar.jpg" alt="work_calendar">
+                <div class="icon">
+                  <a href="https://github.com/howie12207/calendar" target="_blank" class="btn">Code</a>
+                  <a href="https://howie12207.github.io/calendar/index.html" target="_blank" class="btn">Demo</a>
+                </div>
+              </div>
+              <div class="txt">
+                <h2>萬年曆 - Todolist</h2>
+                <ul>
+                  <li>Vue</li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pic">
+                <div class="mask">
+                  <a href="https://github.com/howie12207/workout" target="_blank" class="btn">Code</a>
+                  <a href="https://howie12207.github.io/workout" target="_blank" class="btn">Demo</a>
+                </div>
+                <img src="./image/workout.jpg" alt="work_workout">
+                <div class="icon">
+                  <a href="https://github.com/howie12207/workout" target="_blank" class="btn">Code</a>
+                  <a href="https://howie12207.github.io/workout" target="_blank" class="btn">Demo</a>
+                </div>
+              </div>
+              <div class="txt">
+                <h2>電商網站 - 健身趣</h2>
+                <ul>
+                  <li>Vue CLI3 開發</li>
+                  <li>Vuex 管理資料流</li>
+                  <li>SCSS</li>
+                  <li>ESLint</li>
+                  <li>API串接</li>
+                </ul>
+              </div>
+            </div>
+            <!-- <div class="item">
+              <div class="pic">
+                <div class="mask">
+                  <a href="#" class="btn">Code</a>
+                  <a href="#" class="btn">Demo</a>
+                </div>
+                <img src="./image/workout.jpg" alt="work_workout">
+                <div class="icon">
+                  <a href="#" class="btn">Code</a>
+                  <a href="#" class="btn">Demo</a>
+                </div>
+              </div>
+              <div class="txt">
+                <h2>電商網站 - 健身趣</h2>
+                <ul>
+                  <li>Vue CLI3 開發</li>
+                  <li>Vuex 管理資料流</li>
+                  <li>SCSS</li>
+                  <li>ESLint</li>
+                  <li>API串接</li>
+                </ul>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- ====== 頁尾 ====== -->
+      <footer class="footer" id="footer">
+        Copyright &copy; 2020 by Howie. All rights reserved.
+      </div>
+    </div>
+    <script src="./all.js"></script>
+  </body>
+</html>

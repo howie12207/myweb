@@ -1,0 +1,636 @@
+@import url("./reset.css");
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+.active {
+  opacity: 1 !important;
+  transform: translateX(0px) !important;
+  transform: translateY(0px) !important;
+}
+.active:after {
+  right: 0 !important;
+}
+.activeNav {
+  color: brown !important;
+}
+.container {
+  font-family: Microsoft JhengHei;
+}
+/* ============ Header ============ */
+.container > .header {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+/* --- 菜單 --- */
+.container > .header > .menu {
+  position: absolute;
+  top: 0px;
+  left: 16px;
+}
+.container > .header > .menu > a {
+  color: white;
+}
+.container > .header > .menu > a > i {
+  padding: 22px 8px;
+  box-sizing: border-box;
+}
+.container > .header > .menu > a > .fa-chevron-up {
+  display: none;
+}
+.container > .header > .menu > a > .fa-chevron-down {
+  transform: translateY(0px);
+  transition: 1s;
+}
+.container > .header > .menu > a > .fa-chevron-down:hover {
+  transform: translateY(8px);
+}
+.container > .header > .menu > a > .fa-chevron-up {
+  transform: translateY(0px);
+  transition: 1s;
+}
+.container > .header > .menu > a > .fa-chevron-up:hover {
+  transform: translateY(-8px);
+}
+/* --- logo --- */
+.container > .header > .logo {
+  height: 60px;
+  line-height: 60px;
+  align-self: center;
+}
+.container > .header > .logo a {
+  color: white;
+}
+/* --- 導覽列 --- */
+.container > .header > .nav {
+  font-size: 0;
+  font-weight: 900;
+  display: flex;
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+  transition: 1s;
+  flex-direction: column;
+}
+.container > .header > .nav > a {
+  font-size: 15px;
+  padding: 20px 24px;
+  color: gray;
+  transition: 0.4s;
+}
+.container > .header > .nav > a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* ============ Home ============ */
+.container > .home {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../image/home.jpg");
+  background-size: cover;
+}
+.container > .home > .mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+/* --- 主標題 --- */
+.container > .home > .mask > h1 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+}
+/* --- 次標題 --- */
+.container > .home > .mask > h2 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+}
+/* --- 滑動按鈕 --- */
+.container > .home > .mask > .slideBtn {
+  position: absolute;
+  bottom: 8px;
+  color: white;
+  border: 1px solid white;
+  padding: 20px 8px;
+  border-radius: 16px;
+}
+.container > .home > .mask > .slideBtn:hover {
+  color: brown;
+  border: 1px solid brown;
+}
+.container > .home > .mask > .slideBtn i {
+  transform: translateY(-12px);
+  animation: slide 3s infinite;
+  opacity: 0;
+}
+/* ============ 學經歷 ============ */
+.container > .experience {
+  margin: 0 auto;
+  width: 100%;
+  background-image: url("../image/experience.jpg");
+  background-size: cover;
+}
+.container > .experience > .mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 0 40px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* --- 標題 --- */
+.container > .experience > .mask > h1 {
+  align-self: center;
+  margin: 16px 0 24px;
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 900;
+  position: relative;
+}
+.container > .experience > .mask > h1:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: 0;
+  right: 100%;
+  bottom: -8px;
+  background-color: brown;
+  transition: 1s;
+}
+.container > .experience > .mask > .section {
+  opacity: 0;
+  transition: 1s;
+}
+.container > .experience > .mask > .section > .item {
+  position: relative;
+  padding: 16px;
+}
+.container > .experience > .mask > .section > .item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* --- 內容標題 --- */
+.container > .experience > .mask > .section > .item > h2 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  color: brown;
+}
+/* --- 內容次標題 --- */
+.container > .experience > .mask > .section > .item > h3 {
+  font-size: 20px;
+  line-height: 30px;
+  color: green;
+}
+/* --- 內容次標題時間 --- */
+.container > .experience > .mask > .section > .item > h3 > .time {
+  font-size: 14px;
+  font-style: italic;
+  margin: 0 0 0 8px;
+  color: aqua;
+}
+/* --- 內容 --- */
+.container > .experience > .mask > .section > .item > .detail > li {
+  line-height: 24px;
+  margin: 0 0 0 16px;
+}
+.container > .experience > .mask > .section > .item > .detail > li:before {
+  content: "-";
+  margin: 0 8px 0 0;
+}
+/* ============ 關於我 ============ */
+.container > .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto 24px;
+}
+/* --- 標題 --- */
+.container > .about > h1 {
+  margin: 16px 0 24px;
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 900;
+  position: relative;
+}
+.container > .about > h1:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: 0;
+  right: 100%;
+  bottom: -8px;
+  background-color: brown;
+  transition: 1s;
+}
+.container > .about > .section {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* --- 左側 --- */
+.container > .about > .section > .pic {
+  min-width: 320px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-100vw);
+  transition: 1s;
+}
+/* --- 個人照片 --- */
+.container > .about > .section > .pic > .me {
+  width: 240px;
+  height: 240px;
+  vertical-align: top;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* --- 小圖示 --- */
+.container > .about > .section > .pic > .icon {
+  margin: 16px 0;
+}
+.container > .about > .section > .pic > .icon > a:hover {
+  animation: spin 1s infinite alternate;
+  background-color: brown;
+  transition: 0.5s;
+}
+.container > .about > .section > .pic > .icon > a {
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+}
+/* --- Email --- */
+.container > .about > .section > .pic > .email {
+  margin: 0 0 16px;
+}
+.container > .about > .section > .pic > .email > i {
+  margin: 0 8px 0;
+}
+/* --- 右側 --- */
+.container > .about > .section > .txt {
+  line-height: 24px;
+  margin: 0 20px;
+  transform: translateX(100vw);
+  transition: 1s;
+}
+.container > .about > .section > .txt > p {
+  text-indent: 2em;
+  margin: 0 0 16px;
+}
+.container > .about > .section > .txt > p > strong {
+  color: red;
+  font-weight: 600;
+}
+/* ============ 技能 ============ */
+.container > .skills {
+  margin: 0 auto;
+  width: 100%;
+  background-image: url("../image/skills.jpg");
+  background-size: cover;
+}
+.container > .skills > .mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 0 40px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* --- 標題 --- */
+.container > .skills > .mask > h1 {
+  align-self: center;
+  margin: 16px 0 24px;
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 900;
+  position: relative;
+}
+.container > .skills > .mask > h1:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: 0;
+  right: 100%;
+  bottom: -8px;
+  background-color: brown;
+  transition: 1s;
+}
+.container > .skills > .mask > .section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.container > .skills > .mask > .section > .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  margin: 16px;
+  overflow: hidden;
+}
+/* --- 圖片 --- */
+.container > .skills > .mask > .section > .item > .pic > img {
+  width: 160px;
+  height: 160px;
+  vertical-align: top;
+}
+/* --- 文字 --- */
+.container > .skills > .mask > .section > .item > .txt {
+  /* opacity: 0; */
+  transition: 1s;
+  transform: translateY(-100vh);
+}
+.container > .skills > .mask > .section > .item > .txt > h2 {
+  position: relative;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: 700;
+  color: brown;
+}
+.container > .skills > .mask > .section > .item:hover > .txt > h2 {
+  color: white;
+}
+.container > .skills > .mask > .section > .item > .txt > h2:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 4px;
+  background-color: yellow;
+  height: 2px;
+  transition: 1s;
+}
+.container > .skills > .mask > .section > .item:hover > .txt > h2:after {
+  left: 10%;
+  right: 10%;
+}
+.container > .skills > .mask > .section > .item > .txt > ul {
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+}
+.container > .skills > .mask > .section > .item:hover > .txt > ul {
+  color: aqua;
+}
+/* ============ 作品集 ============ */
+.container > .works {
+  margin: 0 auto;
+  width: 100%;
+  background-image: url("../image/works.jpg");
+  background-size: cover;
+}
+.container > .works > .mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 0 40px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* --- 標題 --- */
+.container > .works > .mask > h1 {
+  align-self: center;
+  margin: 16px 0 24px;
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 900;
+  position: relative;
+}
+.container > .works > .mask > h1:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: 0;
+  right: 100%;
+  bottom: -8px;
+  background-color: brown;
+  transition: 1s;
+}
+.container > .works > .mask > .section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.container > .works > .mask > .section > .item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 16px 0;
+  overflow: hidden;
+}
+/* --- 圖片 --- */
+.container > .works > .mask > .section > .item > .pic {
+  position: relative;
+  width: 320px;
+  transform: translateX(-100vw);
+  transition: 1s;
+}
+.container > .works > .mask > .section > .item > .pic > img {
+  width: 320px;
+  height: 240px;
+  object-fit: cover;
+  vertical-align: top;
+}
+/* --- 遮罩層 --- */
+.container > .works > .mask > .section > .item > .pic > .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.container > .works > .mask > .section > .item > .pic > .mask > a {
+  color: blue;
+  margin: 0 auto;
+  padding: 8px 24px;
+  border: 1px solid blue;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  transition: 0.4s;
+}
+.container > .works > .mask > .section > .item > .pic > .mask > a:first-child {
+  color: brown;
+  border: 1px solid brown;
+}
+.container > .works > .mask > .section > .item > .pic > .mask > a:hover {
+  background-color: blue;
+  color: white;
+}
+.container
+  > .works
+  > .mask
+  > .section
+  > .item
+  > .pic
+  > .mask
+  > a:first-child:hover {
+  background-color: brown;
+  color: white;
+}
+/* --- Icon --- */
+.container > .works > .mask > .section > .item > .pic > .icon {
+  display: flex;
+}
+.container > .works > .mask > .section > .item > .pic > .icon > a {
+  width: 160px;
+  text-align: center;
+  padding: 16px 0;
+  background-color: blue;
+  color: white;
+}
+.container > .works > .mask > .section > .item > .pic > .icon > a:first-child {
+  background-color: brown;
+}
+/* --- 文字 --- */
+.container > .works > .mask > .section > .item > .txt {
+  margin: 0 24px;
+  transform: translateX(100vw);
+  transition: 1s;
+}
+.container > .works > .mask > .section > .item > .txt > h2 {
+  color: white;
+  font-size: 32px;
+  line-height: 64px;
+}
+.container > .works > .mask > .section > .item > .txt > ul > li {
+  font-size: 20px;
+  line-height: 30px;
+  color: darkorange;
+}
+/* ============ 頁尾 ============ */
+.container > .footer {
+  height: 120px;
+  text-align: center;
+  line-height: 120px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+@media screen and (min-width: 960px) {
+  /* ============ Header ============ */
+  .container > .header {
+    height: 60px;
+    padding: 0 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* --- 菜單 --- */
+  .container > .header > .menu {
+    display: none;
+  }
+  /* --- 導覽列 --- */
+  .container > .header > .nav {
+    flex-direction: row;
+    visibility: visible !important;
+    max-height: 60px !important;
+  }
+  /* ============ 學經歷 ============ */
+  /* --- 標題 --- */
+  .container > .experience > .mask > h1 {
+    margin: 48px 0 40px;
+  }
+  /* --- 進度條 --- */
+  .container > .experience > .mask > .section > .item > h2:before {
+    content: "";
+    position: absolute;
+    top: 12px; /* line-height- width/2 */
+    left: -80px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: darkblue;
+  }
+  .container > .experience > .mask > .section > .item > h2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    left: -73px;
+    background-color: darkblue;
+    transform: translateY(12px);
+  }
+  /* ============ 關於我 ============ */
+  /* --- 標題 --- */
+  .container > .about > h1 {
+    margin: 48px 0 40px;
+  }
+  /* --- Email --- */
+  .container > .about > .section > .pic > .email {
+    margin: 0;
+  }
+  .container > .about > .section {
+    flex-direction: row;
+  }
+  /* ============ 技能 ============ */
+  /* --- 標題 --- */
+  .container > .skills > .mask > h1 {
+    margin: 48px 0 40px;
+  }
+  /* ============ 作品集 ============ */
+  /* --- 標題 --- */
+  .container > .works > .mask > h1 {
+    margin: 48px 0 40px;
+  }
+  .container > .works > .mask > .section {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1300px;
+  }
+  .container > .works > .mask > .section > .item {
+    flex-direction: row;
+  }
+  .container > .works > .mask > .section > .item:hover > .pic > .mask {
+    display: flex;
+  }
+  .container > .works > .mask > .section > .item > .pic > .icon {
+    display: none;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(12px);
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+}
