@@ -11,13 +11,18 @@ a {
   transform: translateY(0px) !important;
 }
 .active:after {
-  right: 0 !important;
+  right: 20% !important;
 }
 .activeNav {
   color: brown !important;
 }
 .container {
   font-family: Microsoft JhengHei;
+  background-image: url(../image/main.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /* ============ Header ============ */
 .container > .header {
@@ -93,13 +98,7 @@ a {
 .container > .home {
   width: 100%;
   height: 100vh;
-  background-image: url("../image/home.jpg");
-  background-size: cover;
-}
-.container > .home > .mask {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -109,19 +108,19 @@ a {
   text-align: center;
 }
 /* --- 主標題 --- */
-.container > .home > .mask > h1 {
+.container > .home > h1 {
   font-weight: 900;
   font-size: 48px;
   line-height: 72px;
 }
 /* --- 次標題 --- */
-.container > .home > .mask > h2 {
+.container > .home > h2 {
   font-weight: 900;
   font-size: 24px;
   line-height: 36px;
 }
 /* --- 滑動按鈕 --- */
-.container > .home > .mask > .slideBtn {
+.container > .home > .slideBtn {
   position: absolute;
   bottom: 8px;
   color: white;
@@ -129,11 +128,11 @@ a {
   padding: 20px 8px;
   border-radius: 16px;
 }
-.container > .home > .mask > .slideBtn:hover {
+.container > .home > .slideBtn:hover {
   color: brown;
   border: 1px solid brown;
 }
-.container > .home > .mask > .slideBtn i {
+.container > .home > .slideBtn i {
   transform: translateY(-12px);
   animation: slide 3s infinite;
   opacity: 0;
@@ -142,19 +141,20 @@ a {
 .container > .experience {
   margin: 0 auto;
   width: 100%;
-  background-image: url("../image/experience.jpg");
-  background-size: cover;
-}
-.container > .experience > .mask {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   padding: 0 0 40px 0;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(199, 144, 129, 0.9) 0%,
+    rgba(223, 165, 121, 0.9) 100%
+  );
 }
 /* --- 標題 --- */
-.container > .experience > .mask > h1 {
+.container > .experience > h1 {
   align-self: center;
   margin: 16px 0 24px;
   font-size: 40px;
@@ -162,53 +162,54 @@ a {
   font-weight: 900;
   position: relative;
 }
-.container > .experience > .mask > h1:after {
+.container > .experience > h1:after {
   content: "";
   position: absolute;
   height: 4px;
-  left: 0;
+  left: 20%;
   right: 100%;
   bottom: -8px;
   background-color: brown;
   transition: 1s;
 }
-.container > .experience > .mask > .section {
+.container > .experience > .section {
   opacity: 0;
   transition: 1s;
 }
-.container > .experience > .mask > .section > .item {
+.container > .experience > .section > .item {
   position: relative;
   padding: 16px;
 }
-.container > .experience > .mask > .section > .item:hover {
+.container > .experience > .section > .item:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 /* --- 內容標題 --- */
-.container > .experience > .mask > .section > .item > h2 {
+.container > .experience > .section > .item > h2 {
   font-size: 24px;
   line-height: 40px;
   font-weight: 600;
-  color: brown;
+  color: maroon;
 }
 /* --- 內容次標題 --- */
-.container > .experience > .mask > .section > .item > h3 {
+.container > .experience > .section > .item > h3 {
   font-size: 20px;
   line-height: 30px;
-  color: green;
+  color: crimson;
 }
 /* --- 內容次標題時間 --- */
-.container > .experience > .mask > .section > .item > h3 > .time {
+.container > .experience > .section > .item > h3 > .time {
   font-size: 14px;
   font-style: italic;
   margin: 0 0 0 8px;
-  color: aqua;
+  color: black;
 }
 /* --- 內容 --- */
-.container > .experience > .mask > .section > .item > .detail > li {
+.container > .experience > .section > .item > .detail > li {
   line-height: 24px;
   margin: 0 0 0 16px;
+  color: darkred;
 }
-.container > .experience > .mask > .section > .item > .detail > li:before {
+.container > .experience > .section > .item > .detail > li:before {
   content: "-";
   margin: 0 8px 0 0;
 }
@@ -217,9 +218,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  max-width: 1120px;
-  margin: 0 auto 24px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-image: linear-gradient(
+    to top,
+    #dad4ec 0%,
+    #dad4ec 1%,
+    #f3e7e9 100%
+  );
 }
 /* --- 標題 --- */
 .container > .about > h1 {
@@ -233,7 +239,7 @@ a {
   content: "";
   position: absolute;
   height: 4px;
-  left: 0;
+  left: 20%;
   right: 100%;
   bottom: -8px;
   background-color: brown;
@@ -261,6 +267,13 @@ a {
   vertical-align: top;
   object-fit: cover;
   border-radius: 50%;
+}
+/* --- 名字 --- */
+.container > .about > .section > .pic > .name {
+  font-size: 24px;
+  line-height: 40px;
+  margin: 8px 0 0;
+  color: darkred;
 }
 /* --- 小圖示 --- */
 .container > .about > .section > .pic > .icon {
@@ -295,6 +308,7 @@ a {
   margin: 0 20px;
   transform: translateX(100vw);
   transition: 1s;
+  max-width: 600px;
 }
 .container > .about > .section > .txt > p {
   text-indent: 2em;
@@ -308,19 +322,20 @@ a {
 .container > .skills {
   margin: 0 auto;
   width: 100%;
-  background-image: url("../image/skills.jpg");
-  background-size: cover;
-}
-.container > .skills > .mask {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to top,
+    rgba(230, 185, 128, 0.6) 0%,
+    rgba(234, 205, 163, 0.6) 100%
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   padding: 0 0 40px 0;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 /* --- 標題 --- */
-.container > .skills > .mask > h1 {
+.container > .skills > h1 {
   align-self: center;
   margin: 16px 0 24px;
   font-size: 40px;
@@ -328,24 +343,24 @@ a {
   font-weight: 900;
   position: relative;
 }
-.container > .skills > .mask > h1:after {
+.container > .skills > h1:after {
   content: "";
   position: absolute;
   height: 4px;
-  left: 0;
+  left: 20%;
   right: 100%;
   bottom: -8px;
   background-color: brown;
   transition: 1s;
 }
-.container > .skills > .mask > .section {
+.container > .skills > .section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1120px;
   margin: 0 auto;
 }
-.container > .skills > .mask > .section > .item {
+.container > .skills > .section > .item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -354,18 +369,18 @@ a {
   overflow: hidden;
 }
 /* --- 圖片 --- */
-.container > .skills > .mask > .section > .item > .pic > img {
+.container > .skills > .section > .item > .pic > img {
   width: 160px;
   height: 160px;
   vertical-align: top;
 }
 /* --- 文字 --- */
-.container > .skills > .mask > .section > .item > .txt {
+.container > .skills > .section > .item > .txt {
   /* opacity: 0; */
   transition: 1s;
   transform: translateY(-100vh);
 }
-.container > .skills > .mask > .section > .item > .txt > h2 {
+.container > .skills > .section > .item > .txt > h2 {
   position: relative;
   font-size: 24px;
   line-height: 60px;
@@ -373,10 +388,10 @@ a {
   font-weight: 700;
   color: brown;
 }
-.container > .skills > .mask > .section > .item:hover > .txt > h2 {
+.container > .skills > .section > .item:hover > .txt > h2 {
   color: white;
 }
-.container > .skills > .mask > .section > .item > .txt > h2:after {
+.container > .skills > .section > .item > .txt > h2:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -386,36 +401,32 @@ a {
   height: 2px;
   transition: 1s;
 }
-.container > .skills > .mask > .section > .item:hover > .txt > h2:after {
+.container > .skills > .section > .item:hover > .txt > h2:after {
   left: 10%;
   right: 10%;
 }
-.container > .skills > .mask > .section > .item > .txt > ul {
+.container > .skills > .section > .item > .txt > ul {
   font-size: 20px;
   line-height: 30px;
   color: white;
 }
-.container > .skills > .mask > .section > .item:hover > .txt > ul {
-  color: aqua;
+.container > .skills > .section > .item:hover > .txt > ul {
+  color: brown;
 }
 /* ============ 作品集 ============ */
 .container > .works {
   margin: 0 auto;
   width: 100%;
   min-height: 70vh;
-  background-image: url("../image/works.jpg");
-  background-size: cover;
-}
-.container > .works > .mask {
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   padding: 0 0 40px 0;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 /* --- 標題 --- */
-.container > .works > .mask > h1 {
+.container > .works > h1 {
   align-self: center;
   margin: 16px 0 24px;
   font-size: 40px;
@@ -423,52 +434,52 @@ a {
   font-weight: 900;
   position: relative;
 }
-.container > .works > .mask > h1:after {
+.container > .works > h1:after {
   content: "";
   position: absolute;
   height: 4px;
-  left: 0;
+  left: 20%;
   right: 100%;
   bottom: -8px;
   background-color: brown;
   transition: 1s;
 }
-.container > .works > .mask > .section {
+.container > .works > .section {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 }
-.container > .works > .mask > .section > .item {
+.container > .works > .section > .item {
   display: flex;
   flex-direction: column;
   margin: 0 0 16px 0;
   overflow: hidden;
 }
 /* --- 圖片 --- */
-.container > .works > .mask > .section > .item > .pic {
+.container > .works > .section > .item > .pic {
   position: relative;
   width: 320px;
   transform: translateX(-100vw);
   transition: 1s;
 }
-.container > .works > .mask > .section > .item > .pic > img {
+.container > .works > .section > .item > .pic > img {
   width: 320px;
   height: 240px;
   object-fit: cover;
   vertical-align: top;
 }
 /* --- 遮罩層 --- */
-.container > .works > .mask > .section > .item > .pic > .mask {
+.container > .works > .section > .item > .pic > .mask {
   width: 100%;
   height: 100%;
   position: absolute;
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 }
-.container > .works > .mask > .section > .item > .pic > .mask > a {
+.container > .works > .section > .item > .pic > .mask > a {
   color: blue;
   margin: 0 auto;
   padding: 8px 24px;
@@ -477,54 +488,48 @@ a {
   font-weight: 700;
   transition: 0.4s;
 }
-.container > .works > .mask > .section > .item > .pic > .mask > a:first-child {
+.container > .works > .section > .item > .pic > .mask > a:first-child {
   color: brown;
   border: 1px solid brown;
 }
-.container > .works > .mask > .section > .item > .pic > .mask > a:hover {
+.container > .works > .section > .item > .pic > .mask > a:hover {
   background-color: blue;
   color: white;
 }
-.container
-  > .works
-  > .mask
-  > .section
-  > .item
-  > .pic
-  > .mask
-  > a:first-child:hover {
+.container > .works > .section > .item > .pic > .mask > a:first-child:hover {
   background-color: brown;
   color: white;
 }
 /* --- Icon --- */
-.container > .works > .mask > .section > .item > .pic > .icon {
+.container > .works > .section > .item > .pic > .icon {
   display: flex;
 }
-.container > .works > .mask > .section > .item > .pic > .icon > a {
+.container > .works > .section > .item > .pic > .icon > a {
   width: 160px;
   text-align: center;
   padding: 16px 0;
   background-color: blue;
   color: white;
 }
-.container > .works > .mask > .section > .item > .pic > .icon > a:first-child {
+.container > .works > .section > .item > .pic > .icon > a:first-child {
   background-color: brown;
 }
 /* --- 文字 --- */
-.container > .works > .mask > .section > .item > .txt {
+.container > .works > .section > .item > .txt {
   margin: 0 24px;
   transform: translateX(100vw);
   transition: 1s;
+  width: 280px;
 }
-.container > .works > .mask > .section > .item > .txt > h2 {
+.container > .works > .section > .item > .txt > h2 {
   color: white;
   font-size: 32px;
   line-height: 64px;
 }
-.container > .works > .mask > .section > .item > .txt > ul > li {
+.container > .works > .section > .item > .txt > ul > li {
   font-size: 20px;
   line-height: 30px;
-  color: darkorange;
+  color: forestgreen;
 }
 /* ============ 頁尾 ============ */
 .container > .footer {
@@ -556,28 +561,28 @@ a {
   }
   /* ============ 學經歷 ============ */
   /* --- 標題 --- */
-  .container > .experience > .mask > h1 {
+  .container > .experience > h1 {
     margin: 48px 0 40px;
   }
   /* --- 進度條 --- */
-  .container > .experience > .mask > .section > .item > h2:before {
+  .container > .experience > .section > .item > h2:before {
     content: "";
     position: absolute;
-    top: 12px; /* line-height- width/2 */
-    left: -80px;
-    width: 16px;
-    height: 16px;
+    top: 0px; /* line-height- width/2 */
+    left: -38px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background-color: darkblue;
+    background-color: darkred;
   }
-  .container > .experience > .mask > .section > .item > h2:after {
+  .container > .experience > .section > .item > h2:after {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     width: 2px;
-    left: -73px;
-    background-color: darkblue;
+    left: -33px;
+    background-color: darkred;
     transform: translateY(12px);
   }
   /* ============ 關於我 ============ */
@@ -591,29 +596,30 @@ a {
   }
   .container > .about > .section {
     flex-direction: row;
+    padding: 80px 0 0;
   }
   /* ============ 技能 ============ */
   /* --- 標題 --- */
-  .container > .skills > .mask > h1 {
+  .container > .skills > h1 {
     margin: 48px 0 40px;
   }
   /* ============ 作品集 ============ */
   /* --- 標題 --- */
-  .container > .works > .mask > h1 {
+  .container > .works > h1 {
     margin: 48px 0 40px;
   }
-  .container > .works > .mask > .section {
+  .container > .works > .section {
     flex-direction: row;
     justify-content: center;
     max-width: 1300px;
   }
-  .container > .works > .mask > .section > .item {
+  .container > .works > .section > .item {
     flex-direction: row;
   }
-  .container > .works > .mask > .section > .item:hover > .pic > .mask {
+  .container > .works > .section > .item:hover > .pic > .mask {
     display: flex;
   }
-  .container > .works > .mask > .section > .item > .pic > .icon {
+  .container > .works > .section > .item > .pic > .icon {
     display: none;
   }
 }
