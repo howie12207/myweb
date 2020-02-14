@@ -11,7 +11,9 @@
     />
     <style>
       @import url("./css/all.css");
+      @import url('./css/typing.css');
     </style>
+    <script src="./typing.js"></script>
   </head>
   <body>
     <div class="container">
@@ -25,7 +27,9 @@
         </div>
         <!-- --- Logo --- -->
         <div class="logo">
-          <a href="#home" id="logo">Howie</a>
+          <a href="#home" id="logo">
+            <img src="./image/logo.png" alt="">
+          </a>
         </div>
         <!-- --- 導覽列 --- -->
         <nav class="nav" id="nav">
@@ -37,10 +41,7 @@
       </div>
       <!-- ====== 首頁 ====== -->
       <div class="home" id="home">
-          <h1>Hello I'm Howie</h1>
-          <h2>
-            <p>Welcome to my website</p>
-          </h2>
+          <h1><span id="words"></span><span id="cursor">|</span></h1>
           <a href="#" class="slideBtn" id="slideBtn">
             <i class="fas fa-long-arrow-alt-down"></i>
           </a>
